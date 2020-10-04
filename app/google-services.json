@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "522931673361",
+    "firebase_url": "https://daily-consumption.firebaseio.com",
+    "project_id": "daily-consumption",
+    "storage_bucket": "daily-consumption.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522931673361:android:03d743b0c0966ddd5414b0",
+        "android_client_info": {
+          "package_name": "com.example.dailyconsumption"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "522931673361-0qv2ial360v3hao4234umljt23l1qrp7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dailyconsumption",
+            "certificate_hash": "314f950e4ab24608d0ed7d8d2a0103c67c787b4e"
+          }
+        },
+        {
+          "client_id": "522931673361-p3g85ijaes8moblirn6j6j42rtsppvu8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dailyconsumption",
+            "certificate_hash": "a108688cb983d78377f7a0d86bdc124f6ff56675"
+          }
+        },
+        {
+          "client_id": "522931673361-v1s8mjn50hjjpqe5fv0tphkj7netnnb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyjndk1t_QqFz5esyuTK8GhRwsnW0ZGMw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "522931673361-v1s8mjn50hjjpqe5fv0tphkj7netnnb4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

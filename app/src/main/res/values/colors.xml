@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent2">#96c94f</color>
+    <color name="bg_color">#F5F5F5</color>
+    <color name="inactive_color">#d7d7d7</color>
+    <color name="lighter_inactive_color">#E7E7E7</color>
+    <color name="red_color">#fc3a2f</color>
+
+    <color name="active_color">#4897f3</color>
+    <color name="marks_bg_color">#15152f</color>
+    <color name="active_color1">#0a48a3</color>
+    <color name="active_color2">#175ab9</color>
+    <color name="black">#000000</color>
+    <color name="darker_bg">#8e8e8e</color>
+    <color name="setting_color">#241F46</color>
+
+
+    <!--<color name="smokewhite">#FFFAFA</color>-->
+    <color name="smokewhite">#F5F5F5</color>
+    <color name="school_color">#96c94e</color>
+    <color name="teacher_color">#00b7b9</color>
+    <color name="attendance_present_color">#2E7D32</color>
+    <color name="attendance_absent_color">#F44336</color>
+    <color name="attendance_total_color">#4897f3</color>
+    <color name="white_color">#ffffff</color>
+    <color name="whiter">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="grey">#666666</color>
+    <color name="light_bg">#E4E0E0</color>
+    <color name="logout">#5F889B</color>
+
+
+    <color name="primary1">#dc9cfd</color>
+    <color name="primary2">#ffefeb</color>
+    <color name="primary3">#9ce47c</color>
+    <color name="primary4">#ffffff</color>
+    <color name="primary5">#f56a4e</color>
+    <color name="googlecolor">#DB4437</color>
+
+
+
+    //colors for piechart//
+    <color name="color1">#4897f3</color>
+    <color name="color2">#e04c34</color>
+    <color name="color3">#eda81d</color>
+    <color name="color4">#3b99b5</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="black_trans">#4c4c4c</color>
+    <color name="lightgreen">#d9f7bd</color>
+    <color name="lightred">#fde9e7</color>
+    <color name="lightgreenery">#69bc45</color>
+    <color name="lightpurple">#eddffb</color>
+    <color name="lightblue">#e1f9fc</color>
+
+
+    <color name="shadeofblue1">#cbe3fb</color>
+    <color name="shadeofblue2">#1e6595</color>
+    <color name="shadeofblue3">#79a9ca</color>
+    <color name="shadeofblue4">#6494bc</color>
+    <color name="shadeofblue5">#94bcd4</color>
+    <color name="dark_bg">#adadad</color>
+    <color name="dark_box">#f2f2f2</color>
+
+    <!--//marksheet category-->
+    <color name="marksheet_category_title_color">#b6d2f3</color>
+    <color name="marksheet_category_title_textcolor">#6f6f6f</color>
+
+
+
+    <!--marksheet detailed recycler colors-->
+    <color name="subjectcolor1">#fff7df</color>
+    <color name="subjectcolor2">#dbeef4</color>
+    <color name="subjectcolor3">#f4f6d8</color>
+    <color name="subjectcolor4">#e4f5eb</color>
+    <color name="subjectcolor5">#f7eaf3</color>
+    <color name="subjectcolor6">#fffbe2</color>
+    <color name="subjectcolor7">#ffe9e2</color>
+    <color name="subjectcolor8">#e2f7fd</color>
+
+
+    <color name="ecacolor1">#fffed7</color>
+    <color name="ecacolor2">#f4efff</color>
+    <color name="ecacolor3">#ffeee8</color>
+
+    <color name="divcolor1">#00a651</color>
+    <color name="divcolor2">#4fa679</color>
+    <color name="divcolor3">#66c291</color>
+    <color name="divcolor4">#f1c03d</color>
+    <color name="divcolor5">#f8aa4f</color>
+    <color name="divcolor6">#f8734f</color>
+    <color name="divcolor7">#ec3c3c</color>
+    <color name="divcolor8">#cc3434</color>
+    <color name="divcolor9">#a92b2b</color>
+
+
+    <color name="item_color_rv">#deebfa</color>
+    <!--dashboard-->
+    <color name="light_red">#c97e7e</color>
+    <color name="attendanceblue">#4e77c3</color>
+    <color name="attendancenottakentext">#ed1c24</color>
+    <color name="attendancenottakenbackground">#ffd9da</color>
+
+    <color name="home_bg_color">#ffffff</color>
+    <color name="home_margin_color">#E8E9E8</color>
+    <color name="home_card_color">#F2F2F2</color>
+    <color name="home_chart_bg_color">#F2F2F2</color>
+
+    <color name="daily_schedule_indicator_color">#27923E</color>
+
+    <color name="teacher_routine_card_color1">#1B602D</color>
+    <color name="teacher_routine_card_color2">#2A9B3E</color>
+
+
+
+    <color name="outer_circle_color">#F9F9F9</color>
+    <color name="outerdark">#747474</color>
+    <color name="middlegray">#959595</color>
+    <color name="centergray">#A5A5A5</color>
+
+
+    <color name="darkestpurpleouter">#7959C3</color>
+    <color name="darkpurplemiddle">#8665D4</color>
+    <color name="purplecenterlight">#9C76F6</color>
+
+
+    <color name="lightcream">#fff7df</color>
+    <color name="teachercolor">#0DB8BA</color>
+    <color name="parentcolor">#40C8F4</color>
+    <color name="schoolcolor">#97CA4F</color>
+    <color name="studentcolor">#FCB040</color>
+
+    <color name="apptheme_yellow">#FDCE3F</color>
+    <color name="apptheme_light_black">#535760 </color>
+    <color name="apptheme_dark_black">#444851</color>
+
+    <color name="brinjal_theme">#6a73af</color>
+</resources>

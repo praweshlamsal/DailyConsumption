@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutBottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/apptheme_light_black"
+    android:paddingBottom="16dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    android:orientation="vertical">
+    <TextView
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/apptheme_dark_black"
+        android:text="ADD ITEM"
+        android:textStyle="bold"
+        android:textColor="@color/whiter"
+        android:fontFamily="@font/righteous_regular"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/etItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/whiter"
+        android:textColorHint="@color/dark_bg"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/whiter"
+        android:maxLines="1"
+        android:inputType="textCapSentences"
+        android:fontFamily="@font/righteous_regular"
+        android:nextFocusForward="@+id/etItemPrice"
+        android:hint="Item Name"/>
+    <EditText
+        android:maxLines="1"
+        android:id="@+id/etItemPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/whiter"
+        android:textColorHint="@color/dark_bg"
+        android:layout_marginEnd="32dp"
+        android:inputType="phone"
+        android:backgroundTint="@color/white_color"
+        android:fontFamily="@font/righteous_regular"
+        android:hint="Enter Price"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        android:text="Add"
+        android:id="@+id/valueEnter"
+        android:textColor="@color/whiter"
+        android:textSize="12sp"
+        android:background="@color/apptheme_yellow"
+        android:fontFamily="@font/righteous_regular"/>
+
+
+
+</LinearLayout>

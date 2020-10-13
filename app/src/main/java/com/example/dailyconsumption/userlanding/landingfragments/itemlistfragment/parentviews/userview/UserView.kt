@@ -25,6 +25,7 @@ class UserView(itemView: View) : BaseViewHolder<UserDetail>(itemView){
             .error(R.mipmap.ic_launcher_round)
         Glide.with(itemView.context).load(item.photo).apply(options)
             .into(user_image)
-        user_name.setText(item.fullname)
+        var namearray = item.fullname.split(" ").toTypedArray()
+        user_name.setText(namearray[0])
     }
 }

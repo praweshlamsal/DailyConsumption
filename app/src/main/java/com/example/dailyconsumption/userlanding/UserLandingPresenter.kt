@@ -13,6 +13,7 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.QueryDocumentSnapshot
+import io.realm.Realm
 import java.util.ArrayList
 
 
@@ -29,15 +30,7 @@ class UserLandingPresenter(userLandingContractor: UserLandingContractor):BasePre
         var tablandingObjects = mutableListOf<TabLandingObject>()
         tablandingObjects.add(
             TabLandingObject(
-                "Students",
-                R.drawable.homenormal,
-                R.drawable.homefill,
-                ItemListFragment()
-            )
-        )
-        tablandingObjects.add(
-            TabLandingObject(
-                "Students",
+                "Home",
                 R.drawable.homenormal,
                 R.drawable.homefill,
                 ItemListFragment()

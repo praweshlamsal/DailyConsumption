@@ -16,6 +16,7 @@ import com.example.dailyconsumption.utils.network.ConnectionCheck
 import com.example.dailyconsumption.utils.okdialog.okDialog
 import com.example.dailyconsumption.utils.progressdialog.CustomProgressDialog
 import com.example.dailyconsumption.utils.sharedprefs.SharedKeys
+import com.example.dailyconsumption.utils.sharedprefs.SharedKeys.FullName
 import com.example.dailyconsumption.utils.sharedprefs.SharedPrefsHelper
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -46,7 +47,6 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LoginContractor {
         initiatefirebase()
         forgoogle()
         gmailSignin = findViewById<CardView>(R.id.sign_in_btn)
-//        signout = findViewById<Button>(R.id.sign_out)
         presenter.activity = this.getActivityContext()
         connectionCheck = ConnectionCheck()
         customProgressDialog = CustomProgressDialog(getActivityContext())
@@ -54,12 +54,16 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LoginContractor {
         gmailSignin.setOnClickListener(View.OnClickListener {
             signin()
         })
+        autologin()
+    }
 
-//        signout.setOnClickListener(View.OnClickListener {
-//            signout()
-//        })
-
-
+    private fun autologin() {
+        val fullname = sharedPrefsHelper.getSharedPreferences(this, FullName,"fullname")
+        Log.d("praweshasdasd",fullname)
+        if(!sharedPrefsHelper.getSharedPreferences(this, FullName,"fullname").equals("fullname"))
+        {
+            loginUser()
+        }
     }
 
     private fun setupFirebaseAuth() {
@@ -92,7 +96,7 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LoginContractor {
 
     private fun signin() {
         if(connectionCheck.isNetworkAvailable(this)){
-            customProgressDialog.showDialog("Loggin in","Please Wait okayman")
+            customProgressDialog.showDialog("Loggin in","Please Wait ...")
             var signInIntent: Intent = mGoogleSignInClient.signInIntent
             startActivityForResult(signInIntent, RC_SIGN_IN)
         }
@@ -132,19 +136,6 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LoginContractor {
     }
 
 
-    override fun onResume() {
-        super.onResume()
-
-    }
-
-    override fun onStart() {
-        super.onStart()
-    }
-
-//    private fun signout() {
-////        signout.visibility = View.GONE
-//    }
-
     override fun getActivityContext(): Activity {
         return this
     }
@@ -161,7 +152,6 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LoginContractor {
             SharedKeys.CurrentUserRole,
             "normal"
         )
-
         customProgressDialog.dismissDialog()
 
     }
@@ -188,7 +178,5 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LoginContractor {
     override fun loginAdmin() {
         Log.d("loginAdmin","loginAdmin Login")
     }
-
-
 
 }

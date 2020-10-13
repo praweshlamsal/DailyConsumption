@@ -26,6 +26,8 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.dailyconsumption.R
 import com.example.dailyconsumption.model.TabLandingObject
 import com.google.android.material.tabs.TabLayout
+import io.realm.Realm
+import io.realm.RealmConfiguration
 import kotlinx.android.synthetic.main.activity_landing.*
 import kotlinx.android.synthetic.main.bottomdrawersheet.*
 
@@ -55,6 +57,7 @@ class UserLandingActivity : BaseActivity<UserLandingPresenter>(), UserLandingCon
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Realm.init(this)
         setContentView(R.layout.activity_landing)
         supportActionBar?.hide()
         username_tv = findViewById<TextView>(R.id.user_name)
@@ -66,7 +69,6 @@ class UserLandingActivity : BaseActivity<UserLandingPresenter>(), UserLandingCon
     }
 
     private fun setupviews() {
-
         username_tv.setText(presenter.requestusername().capitalize())
         userLandingFragmentAdapter = UserLandingFragmentAdapter(
             supportFragmentManager,

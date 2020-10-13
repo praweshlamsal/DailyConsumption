@@ -71,10 +71,35 @@
                 android:id="@+id/plus_sign"
                 android:layout_width="38dp"
                 android:layout_height="38dp"
-                android:layout_alignParentEnd="true"
+                android:layout_toLeftOf="@id/wifi"
                 android:layout_marginTop="12dp"
                 android:layout_marginRight="8dp"
                 android:elevation="4dp"
+                app:cardBackgroundColor="@color/apptheme_yellow"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_centerInParent="true"
+                        android:padding="8dp"
+                        android:src="@drawable/plus"
+                        android:tint="@color/whiter" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/wifi"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="8dp"
+                android:elevation="4dp"
+                android:layout_alignParentEnd="true"
                 app:cardBackgroundColor="@color/apptheme_yellow"
                 app:cardCornerRadius="20dp">
 

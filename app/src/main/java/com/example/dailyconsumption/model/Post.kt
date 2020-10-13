@@ -1,9 +1,11 @@
 package com.example.dailyconsumption.model
 
+import io.realm.RealmObject
+
 
 open class Post(
-    val userId: String = "",
-    val id: String = "",
-    val item: String = "",
-    val user: String = "",
-    val price:String= "")
+    var userId: String = "",
+    var id: String = "",
+    var item: String = "",
+    var user: String = "",
+    var price:String= ""):RealmObject()

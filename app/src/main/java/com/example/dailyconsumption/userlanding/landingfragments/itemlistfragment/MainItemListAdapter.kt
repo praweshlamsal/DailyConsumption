@@ -8,7 +8,6 @@ import com.example.dailyconsumption.R
 import com.example.dailyconsumption.base.BaseViewHolder
 import com.example.dailyconsumption.model.Post
 import com.example.dailyconsumption.userlanding.landingfragments.itemlistfragment.parentviews.itemview.ItemListView
-import com.example.dailyconsumption.userlanding.landingfragments.itemlistfragment.parentviews.userview.UserView
 
 class MainItemListAdapter(val userPost: ArrayList<Post>, private val context: Context) : RecyclerView.Adapter<BaseViewHolder<*>>() {
 

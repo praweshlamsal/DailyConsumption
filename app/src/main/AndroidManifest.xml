@@ -16,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".userlanding.UserLandingActivity"></activity>
+        <activity android:name=".userlanding.landingfragments.wifiactivity.WifiConnectionActivity"></activity>
         <activity android:name=".login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

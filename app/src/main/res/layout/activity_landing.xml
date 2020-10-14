@@ -71,7 +71,7 @@
                 android:id="@+id/plus_sign"
                 android:layout_width="38dp"
                 android:layout_height="38dp"
-                android:layout_toLeftOf="@id/wifi"
+                android:layout_toLeftOf="@id/wifi_connection"
                 android:layout_marginTop="12dp"
                 android:layout_marginRight="8dp"
                 android:elevation="4dp"
@@ -93,7 +93,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/wifi"
+                android:id="@+id/wifi_connection"
                 android:layout_width="38dp"
                 android:layout_height="38dp"
                 android:layout_marginTop="12dp"
@@ -112,7 +112,7 @@
                         android:layout_height="33dp"
                         android:layout_centerInParent="true"
                         android:padding="8dp"
-                        android:src="@drawable/plus"
+                        android:src="@drawable/ic_wifi"
                         android:tint="@color/whiter" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>

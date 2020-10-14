@@ -1,6 +1,7 @@
 package com.example.dailyconsumption.userlanding
 
 import android.app.Activity
+import android.content.Intent
 import android.graphics.BlendMode
 import android.graphics.Color
 import android.graphics.Typeface
@@ -25,6 +26,7 @@ import kotlinx.android.synthetic.main.add_item_fragment.*
 import com.bumptech.glide.request.RequestOptions
 import com.example.dailyconsumption.R
 import com.example.dailyconsumption.model.TabLandingObject
+import com.example.dailyconsumption.userlanding.landingfragments.wifiactivity.WifiConnectionActivity
 import com.google.android.material.tabs.TabLayout
 import io.realm.Realm
 import io.realm.RealmConfiguration
@@ -37,11 +39,10 @@ class UserLandingActivity : BaseActivity<UserLandingPresenter>(), UserLandingCon
     lateinit var username_tv: TextView
     lateinit var user_image: ImageView
     lateinit var plus_sign: CardView
+    lateinit var wifi_connection:CardView
     lateinit var bottomSheetBehavior: BottomSheetBehavior<LinearLayout>
     lateinit var addItemBottomSheetFragment: AddItemBottomSheetFragment
     lateinit var customOkDialog: okDialog
-
-
     lateinit var userLandingFragmentAdapter: UserLandingFragmentAdapter
 
     lateinit var viewpager: ViewPager
@@ -60,6 +61,7 @@ class UserLandingActivity : BaseActivity<UserLandingPresenter>(), UserLandingCon
         Realm.init(this)
         setContentView(R.layout.activity_landing)
         supportActionBar?.hide()
+        wifi_connection = findViewById(R.id.wifi_connection)
         username_tv = findViewById<TextView>(R.id.user_name)
         user_image = findViewById<ImageView>(R.id.user_img)
         plus_sign = findViewById<CardView>(R.id.plus_sign)
@@ -69,6 +71,7 @@ class UserLandingActivity : BaseActivity<UserLandingPresenter>(), UserLandingCon
     }
 
     private fun setupviews() {
+        openwificonnectionActivity()
         username_tv.setText(presenter.requestusername().capitalize())
         userLandingFragmentAdapter = UserLandingFragmentAdapter(
             supportFragmentManager,
@@ -210,5 +213,13 @@ class UserLandingActivity : BaseActivity<UserLandingPresenter>(), UserLandingCon
         val tv_title: TextView =
             tablayout!!.getTabAt(0)!!.customView!!.findViewById(R.id.tab_text) as TextView
         tv_title.setTypeface(tv_title.typeface, Typeface.BOLD)
+    }
+
+
+    private fun openwificonnectionActivity(){
+        wifi_connection.setOnClickListener(View.OnClickListener {
+            var intent = Intent(this,WifiConnectionActivity::class.java)
+            startActivity(intent);
+        })
     }
 }

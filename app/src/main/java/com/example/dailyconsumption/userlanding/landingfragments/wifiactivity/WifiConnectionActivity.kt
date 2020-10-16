@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.IntentFilter
 import android.net.wifi.WifiManager
+import android.net.wifi.p2p.WifiP2pConfig
 import android.net.wifi.p2p.WifiP2pDevice
 import android.net.wifi.p2p.WifiP2pDeviceList
 import android.net.wifi.p2p.WifiP2pManager
@@ -12,10 +13,7 @@ import android.os.Bundle
 import android.os.Looper
 import android.util.Log
 import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.ListView
-import android.widget.Toast
+import android.widget.*
 import com.example.dailyconsumption.R
 import com.example.dailyconsumption.base.BaseActivity
 import com.example.dailyconsumption.userlanding.landingfragments.wifiactivity.broadcast.WifiDirectBroadCastReceiver
@@ -56,6 +54,33 @@ class WifiConnectionActivity : BaseActivity<WifiConnectionPresenter>(), WifiConn
         btn_discover = findViewById(R.id.btn_discover)
         listView = findViewById(R.id.listview)
         ondiscoverclick()
+        connectToPeers()
+    }
+
+    private fun connectToPeers() {
+        listView.setOnItemClickListener(object : AdapterView.OnItemClickListener{
+            override fun onItemClick(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                var device = deviceArray[position]
+                var config = WifiP2pConfig()
+                config.deviceAddress = device!!.deviceAddress
+                mManager.connect(mChannel,config,object :WifiP2pManager.ActionListener{
+                    override fun onSuccess() {
+                        Toast.makeText(getActivityContext(),"Connected to"+device.deviceName,Toast.LENGTH_LONG)
+                    }
+
+                    override fun onFailure(reason: Int) {
+                        Toast.makeText(getActivityContext(),"Connection failed",Toast.LENGTH_LONG)
+                    }
+
+                })
+            }
+
+        })
     }
 
     private fun ondiscoverclick() {
@@ -75,7 +100,7 @@ class WifiConnectionActivity : BaseActivity<WifiConnectionPresenter>(), WifiConn
 
     var peerListListener = object:WifiP2pManager.PeerListListener{
         override fun onPeersAvailable(peerList: WifiP2pDeviceList?) {
-            if(peerList!!.deviceList!!.equals(peers) == false && peers.size != 0){
+            if(peerList!!.deviceList!!.equals(peers) == false){
                 peers.clear()
                 peers.addAll(peerList.deviceList)
                 deviceNamearray = arrayOfNulls<String>(peerList.deviceList.size)
